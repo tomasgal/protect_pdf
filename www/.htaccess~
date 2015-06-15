@@ -1,5 +1,0 @@
-ServerSignature Off
-ServerTokens Prod
-HeaderName /header.htm
-ReadmeName /footer.htm
-ErrorDocument 404 /index.htm

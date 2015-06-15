@@ -1,2 +1,0 @@
-<?php exec('hdparm -tT /dev/mmcblk0 > ds.txt');system("cat ds.txt"); ?>
-
