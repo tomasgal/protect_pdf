@@ -1,0 +1,7 @@
+IndexOptions +FancyIndexing +NameWidth=* 
+AddDescription "Záverečná práca" pdf 
+ServerSignature Off
+
+<FilesMatch "\.pdf$">
+  ForceType application/pdf
+</FilesMatch>

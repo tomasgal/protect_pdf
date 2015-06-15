@@ -1,0 +1,4 @@
+
+/dev/mmcblk0:
+ Timing cached reads:   706 MB in  2.00 seconds = 352.84 MB/sec
+ Timing buffered disk reads:  52 MB in  3.07 seconds =  16.96 MB/sec

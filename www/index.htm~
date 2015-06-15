@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="sk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.style1 {text-decoration: underline;}
+.style2 {margin-left: 40px;}
+.style3 {text-align: justify;margin-left: 40px;}
+.style4 {text-align: right;margin-left: 40px;}
+</style>
+</head>
+
+<body>
+
+<p class="style2"><strong>Nástroj na ochranu súborov záverečných prác</strong></p>
+<p class="style2">Nástroj má svoju <a href="#present">prezentačnú</a>,
+<a href="#protect">ochrannú vrstvu</a> a <a href="#product">produkčnú</a>.</p>
+<p style="width: 580px" class="style3"><span class="style1"><a name="present">
+</a>1. Prezentačná vrstva<br />
+</span>rozvetvuje štruktúru stránok na <a href="public/">verejné</a> a
+<a href="protected/">chránene</a>. Pre potreby tejto testovania sú pripravené 
+záverečné práce v adresáry <a href="protected/3/">3</a> (vygenerované preview) a
+<a href="protected/4/">4</a> (preview sa generuje zakaždým). Záverečná práca sa 
+nenačíta automaticky, toto je však možné ľahko zmenením súbora loader.htm na 
+súbor automaticky otvorený po vstupu do adresára.<br />
+<br />
+Prezentačná vrstva využíva nástroj <a href="http://blog.flexpaper.org/">
+Flexpaper</a>, ktorý je pre nekomerčné účely k dispozícii pod licenciou GPL 3. 
+Tento nástroj sprístupňuje dokument vo formáte SWF (small web format), pričom 
+tento môže byť uložený v rastrovej aj bitmapovej grafike).<br />
+<br />
+SWF formát je momentálne podporovaný 99 % webovými prehliadačmi.<sup><span style="width: 430px"><a href="http://web.archive.org/web/20111002003244/http://www.adobe.com/products/player_census/flashplayer/">1</a>)</span></sup>
+<br />
+<br />
+Nástroj Flexpaper je použitý vo verziu zamedzujúcej kopírovanie a
+tlač, vychádzajúc z úravy 
+<a href="http://vigrond.com/blog/2011/06/05/protecting-pdfs-using-flexpaper/">
+Roberta Devitta</a> (2011).<br />
+<br />
+Flexpaper je naprogramovaný v objektovo-orientovanom jazyku ActionScript, ktorý 
+je podporovaný a rozvýjaný firmou Adobe, pričom existujú aj open source 
+kompilátory.<br />
+<br />
+Použitím chránenej verzie Flexpepra získava používateľ možnosť full-textovo 
+vyhľadávať v záverečnej práci, pričom nie je možné s textom ďalej pracovať.</p>
+<p style="width: 580px" class="style3"><span class="style1"><a name="protect">
+</a>2. Ochranná vrstva</span><br />
+je založená na vlastnostiach existujúceho operačného systému Solaris s bežiacou 
+službou webovej prezentácie Apache2. Pre ochranu dokumentov sú využité 
+vlastnosti modulárne Apacha:<br />
+(a) uložené PDF súbory nie sú publikované, (b) pokus o priamu adresáciu súborov 
+je presmerovaný na túto informačnú stránku, (c) cache na úrovni servera je pre 
+chránené adresáre vypnutá. Všetky tieto velastnosti zabezpečuje nastavenie vetvy 
+chránených adresárov súborom .htaccess. Navyše, (d) Apache2 má doplnenú 
+funkcionalitu o modul evasive a security, ktoré štandardne zvyšujú bezpečnosť 
+prevádzky.</p>
+<p style="width: 580px" class="style3"><span class="style1"><a name="product">
+</a>3. Produkčná vrstva</span><br />
+Produkcia SWF prezentácie je realizovaná on-demand PHP scriptom, ktorý 
+skontroluje, či tento súbor existuje a ak nie, vytvorí ho pomocou nástroja
+<a href="http://www.swftools.org/">PDF2SWF</a>. Nástroj je veľmi rýchly a aj na 
+pomalom stroji ARM A20 (2x1GHz) trvá <a href="protected/4/">konverzia 75 
+stranového dokumentu</a> približne 10 sekúnd. Dokument, <a href="protected/3/">
+ktorého SWF časť už bola vygenerovaná</a> je sprístupnený prakticky v reálnom 
+čase.</p>
+<p style="width: 580px" class="style3">
+<a href="https://sandeepverma.wordpress.com/2010/02/19/install-swftools/">
+Inštalácia SWF Tools pre Solaris</a></p>
+<p style="width: 580px" class="style3">V núdzových podmienkach je možné vytvoriť 
+SWF súbory aj mimo prezentačný web a nahrať ich do príslušnej štruktúry.<br />
+<br />
+Celý nástroj tak tvorí modulárny systém, ktorý nevyžaduje zásadný zásah na 
+strane servera. Je tvorený štandardnými komkponentmi, ktoré majú dlhý odhadovaný 
+životný cyklus a budú podporované o veľa rokov. Jednotlivé komponenty 
+(loader.htm, parser, swf prezentátor, ako aj doplnkové obrázky) je možné 
+jednoducho zamieňať podľa potreby. Nástroj je spustiteľný z jednoduchého HTML 
+kódu, ktorý umožňuje integráciu do korporátnej identity, ako aj jeho kombináciu 
+s inými nástrojmi (napríklad google analytics).</p>
+<p style="width: 580px" class="style3">Experimentálne: 
+<a href="protected/5/">Galéria obrazových príloh.</a></p>
+<p style="width: 500px" class="style4">Tomáš Gál, 9. 6. 2015<br />
+</p>
+
+</body>
+</html>

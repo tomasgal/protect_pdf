@@ -1,0 +1,4 @@
+ServerSignature Off
+HeaderName /header.htm
+ReadmeName /footer.htm
+ErrorDocument 404 /index.htm

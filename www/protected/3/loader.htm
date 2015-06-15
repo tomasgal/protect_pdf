@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" type="image/gif" href="/animated_favicon1.gif">
+<title>Nahlad zaverecnej prace</title>
+<style>
+#frameWrap {
+    position:relative;
+    height: 880px;
+    width: 630px;
+    border: 1px solid #777777;
+    background:#f0f0f0;
+    box-shadow:0px 0px 10px #777777;
+}
+
+#iframe1 {
+    height: 877px;
+    width: 620px;
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+#loader1 {
+    position:absolute;
+    left:40%;
+    top:35%;
+    border-radius:20px;
+    padding:25px;
+    border:1px solid #777777;
+    background:#ffffff;
+    box-shadow:0px 0px 10px #777777;
+}
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="frameWrap">
+<img id="loader1" src="../loader.gif" width="36" height="36" alt="loading gif"/>
+<iframe id="iframe1" src="viewer.php" width="630" height="880"></iframe>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#iframe1').on('load', function () {
+            $('#loader1').hide();
+        });
+    });
+</script>
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript" >
+<!--
+document.oncontextmenu = function() {return false}
+if (document.layers) {
+window.captureEvents(Event.MOUSEDOWN);
+window.onmousedown = function(e) {
+if (e.target==document) return false;
+  }
+    } else {
+document.onmousedown = function() {return false}
+}
+//-->
+</SCRIPT>
+
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?tomas.dscloud.me [NC]
+RewriteRule \.(php)$ http://tomas.dscloud.me:6002 [NC,R,L]
+ServerSignature Off 
+
+
+<FilesMatch "\.pdf$|str|flash">
+  Order Deny,Allow
+  Deny from all
+  Allow from 127.0.0.1
+</FilesMatch>
+
+
+IndexIgnore parser.php
+IndexIgnore status.php
