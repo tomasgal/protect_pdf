@@ -9,9 +9,8 @@ $up = ping($host);
 $page = $_SERVER['PHP_SELF'];
 $sec = "10";
 
-echo "DiskStation: ";
 echo '<img src="'.($up ? 'on' : 'off').'.jpg" alt="'.($up ? 'UP' : 'NO').'" />';
-
+echo " DiskStation";
 ?>
 
 <html><head>

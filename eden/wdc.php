@@ -9,9 +9,8 @@ $up = ping($host);
 $page = $_SERVER['PHP_SELF'];
 $sec = "10";
 
-echo "WD Cloud: ";
 echo '<img src="'.($up ? 'on' : 'off').'.jpg" alt="'.($up ? 'UP' : 'NO').'" />';
-
+echo " WD Cloud";
 ?>
 
 <html><head>
