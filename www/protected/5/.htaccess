@@ -27,7 +27,6 @@ ServerSignature Off
   Allow from 127.0.0.1
 </FilesMatch>
 
-IndexIgnore *.swf *.jpg fgr.htm
-IndexIgnore loader.gif
-IndexIgnore viewer.php
-IndexIgnore status.php
+IndexIgnore *.swf *.jpg fgr.htm *.php
+IndexIgnore loader.gif viewer.php status.php
+IndexIgnore ..

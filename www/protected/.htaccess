@@ -1,9 +1,11 @@
 #DirectoryIndex  index.html  index.php /_h5ai/server/php/index.php
+HeaderName /header.htm
+ReadmeName /footer.htm
 IndexOptions +FancyIndexing +NameWidth=* +DescriptionWidth=*
-ServerSignature Off
 AddDescription "Otvorí záverečnú prácu" loader.htm
 AddDescription "Galéria obrazových príloh" prilohy.htm
-
+AddDescription "Návrat" ..
+IndexStyleSheet "/style.css"
 
 <FilesMatch "\.pdf$|str">
   Order Allow,Deny
@@ -11,7 +13,5 @@ AddDescription "Galéria obrazových príloh" prilohy.htm
   Allow from 127.0.0.1
 </FilesMatch>
 
-IndexIgnore *.swf _* *.gif *.jpg fgr.htm
-IndexIgnore loader.gif
-IndexIgnore preview.php
-IndexIgnore status.php
+IndexIgnore *.swf _* *.gif *.jpg fgr.htm gal*
+IndexIgnore loader.gif preview.php status.php

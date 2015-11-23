@@ -2,7 +2,7 @@
 
 $filename = 'flash.swf';
 if (file_exists($filename)) {
-} else { exec('pdf2swf *.pdf -o flash.swf -f -T 9 -t'); }
+} else { exec('pdftk *.pdf cat output out.pdf && pdf2swf out.pdf -o flash.swf -f -s breakonwarning -s jpegquality=50 -s subpixels=1 -T 9 -t  || pdf2swf out.pdf -o flash.swf -f -s jpegquality=50 -s subpixels=1 -s poly2bitmap -T 9 -t'); }
 ?>
 
 <html>
