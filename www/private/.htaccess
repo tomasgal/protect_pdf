@@ -1,0 +1,68 @@
+AuthType Basic
+AuthName "Private Area"
+AuthUserFile /var/.htpasswd
+Require valid-user
+ServerSignature Off
+#HeaderName header.htm
+#ReadmeName footer.htm
+IndexIgnore header.htm footer.htm rpi theme
+IndexIgnore ..
+
+Options +Indexes
+IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=* +IconsAreLinks
+IndexHeadInsert "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />"
+
+AddIcon /private/theme/icons/blank.png ^^BLANKICON^^
+AddIcon /private/theme/icons/folder.png ^^DIRECTORY^^
+AddIcon /private/theme/icons/folder-home.png ..
+AddIconByType (TXT,/private/theme/icons/text.png) text/*
+AddIconByType (IMG,/private/theme/icons/image.png) image/*
+AddIconByType (SND,/private/theme/icons/audio.png) audio/*
+AddIconByType (VID,/private/theme/icons/video.png) video/*
+
+AddIcon /private/theme/icons/archive.png .7z .bz2 .cab .gz .tar
+AddIcon /private/theme/icons/audio.png .aac .aif .aifc .aiff .ape .au .flac .iff .m4a .mid .mp3 .mpa .ra .wav .wma .f4a .f4b .oga .ogg .xm .it .s3m .mod
+AddIcon /private/theme/icons/bin.png .bin .hex
+AddIcon /private/theme/icons/bmp.png .bmp
+AddIcon /private/theme/icons/c.png .c
+AddIcon /private/theme/icons/calc.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv
+AddIcon /private/theme/icons/cd.png .iso
+AddIcon /private/theme/icons/cpp.png .cpp
+AddIcon /private/theme/icons/css.png .css .sass .scss
+AddIcon /private/theme/icons/deb.png .deb
+AddIcon /private/theme/icons/doc.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+AddIcon /private/theme/icons/draw.png .svg .svgz
+AddIcon /private/theme/icons/eps.png .ai .eps
+AddIcon /private/theme/icons/exe.png .exe
+AddIcon /private/theme/icons/gif.png .gif
+AddIcon /private/theme/icons/h.png .h
+AddIcon /private/theme/icons/html.png .html .xhtml .shtml .htm .URL .url
+AddIcon /private/theme/icons/ico.png .ico
+AddIcon /private/theme/icons/java.png .jar
+AddIcon /private/theme/icons/jpg.png .jpg .jpeg .jpe
+AddIcon /private/theme/icons/js.png .js .json
+AddIcon /private/theme/icons/markdown.png .md
+AddIcon /private/theme/icons/package.png .pkg .dmg
+AddIcon /private/theme/icons/pdf.png .pdf
+AddIcon /private/theme/icons/php.png .php .phtml
+AddIcon /private/theme/icons/playlist.png .m3u .m3u8 .pls .pls8
+AddIcon /private/theme/icons/png.png .png
+AddIcon /private/theme/icons/ps.png .ps
+AddIcon /private/theme/icons/psd.png .psd
+AddIcon /private/theme/icons/py.png .py
+AddIcon /private/theme/icons/rar.png .rar
+AddIcon /private/theme/icons/rb.png .rb
+AddIcon /private/theme/icons/rpm.png .rpm
+AddIcon /private/theme/icons/rss.png .rss
+AddIcon /private/theme/icons/script.png .bat .cmd .sh
+AddIcon /private/theme/icons/sql.png .sql
+AddIcon /private/theme/icons/tiff.png .tiff .tif
+AddIcon /private/theme/icons/text.png .txt .nfo
+AddIcon /private/theme/icons/video.png .asf .asx .avi .flv .mkv .mov .mp4 .mpg .rm .srt .swf .vob .wmv .m4v .f4v .f4p .ogv
+AddIcon /private/theme/icons/xml.png .xml
+AddIcon /private/theme/icons/zip.png .zip
+DefaultIcon /private/theme/icons/default.png
+
+HeaderName /private/theme/header.html
+ReadmeName /private/theme/footer.html
+IndexStyleSheet "/private/theme/style.css"
