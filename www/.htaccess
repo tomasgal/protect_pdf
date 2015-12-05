@@ -1,4 +1,7 @@
-ServerSignature Off
-HeaderName /header.htm
-ReadmeName /footer.htm
+SetEnv SERVER_ADMIN tomas.gal@upcmail.sk
+ServerSignature off
 ErrorDocument 404 /index.htm
+AddDefaultCharset UTF-8
+DefaultLanguage sk-SK
+AddEncoding x-compress .Z
+AddEncoding x-gzip .gz .tgz
