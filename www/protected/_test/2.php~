@@ -1,3 +1,0 @@
-<?php
-$open = file_get_contents("flash.swf",false,$context);
-echo $open;
