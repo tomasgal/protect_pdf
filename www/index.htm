@@ -4,15 +4,17 @@
 <head>
 <meta http-equiv="Content-Language" content="sk" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <style type="text/css">
-.style1 {text-decoration: underline;font-family:helvetica, sans-serif;font-size:12px;}
-.style2 {margin-left: 40px;font-family:helvetica, sans-serif;font-size:12px;}
-.style3 {text-align: justify;margin-left: 40px;font-weight:normal;color:#040024;letter-spacing:0.2pt;word-spacing:-0.7pt;font-size:12px;text-align:justify;font-family:helvetica, sans-serif;line-height:1;}
-.style4 {text-align: right;margin-left: 40px;font-family:helvetica, sans-serif;font-size:14px;}
-.style5 {margin-left: 40px;font-family:helvetica, sans-serif;font-size:15px;}
+.body {font-family:'Source Code Pro',serif;font-size:12px;}
+.style1 {text-decoration: underline;font-family:'Source Code Pro', sans-serif;font-size:12.5px;}
+.style2 {margin-left: 40px;font-family:'Source Code Pro', sans-serif;font-size:12px;}
+.style3 {text-align: justify;margin-left: 40px;font-weight:300;color:#040024;letter-spacing:-0.1pt;word-spacing:-0.4pt;font-size:11.4px;text-align:justify;font-family:'Source Code Pro', sans-serif;line-height:1.15;}
+.style4 {text-align: right;margin-left: 40px;font-weight:700;font-family:'Source Code Pro', sans-serif;font-size:14.5px;}
+.style5 {margin-left:40px;font-family:'Source Code Pro',sans-serif;font-weight:700;font-size:14.5px;}
 </style>
-</head>
 
+</head>
 <body>
 
 <p class="style5"><strong>Nástroj na ochranu súborov záverečných prác</strong></p>
@@ -46,8 +48,7 @@ vyhľadávať v záverečnej práci, pričom nie je možné s textom ďalej prac
 </a>2. Ochranná vrstva</span><br />
 je založená na vlastnostiach existujúceho operačného systému Solaris s bežiacou 
 službou webovej prezentácie Apache2. Pre ochranu dokumentov sú využité 
-vlastnosti modulárne Apacha:<br />
-(a) uložené PDF súbory nie sú publikované, (b) pokus o priamu adresáciu súborov 
+moduly Apacha:  (a) uložené PDF súbory nie sú publikované, (b) pokus o priamu adresáciu súborov 
 je presmerovaný na túto informačnú stránku, (c) cache na úrovni servera je pre 
 chránené adresáre vypnutá. Všetky tieto velastnosti zabezpečuje nastavenie vetvy 
 chránených adresárov súborom .htaccess. Navyše, (d) Apache2 má doplnenú 
@@ -74,9 +75,7 @@ strane servera. Je tvorený štandardnými komkponentmi, ktoré majú dlhý odha
 (loader.htm, parser, swf prezentátor, ako aj doplnkové obrázky) je možné 
 jednoducho zamieňať podľa potreby. Nástroj je spustiteľný z jednoduchého HTML 
 kódu, ktorý umožňuje integráciu do korporátnej identity, ako aj jeho kombináciu 
-s inými nástrojmi (napríklad google analytics).</p>
-<p style="width: 580px" class="style3">Experimentálne: 
-<a href="protected/5/">Galéria obrazových príloh.</a></p>
+s inými nástrojmi (napríklad google analytics).</p><br />
 <p style="width: 500px" class="style4">Tomáš Gál, 9. 6. 2015<br />
 </p>
 

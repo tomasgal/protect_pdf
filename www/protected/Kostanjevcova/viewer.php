@@ -1,8 +1,7 @@
 <?php
-
 $filename = 'flash.swf';
 if (file_exists($filename)) {
-} else { exec('pdftk *.pdf cat output out.pdf && pdf2swf out.pdf -o flash.swf -f -s breakonwarning -s jpegquality=50 -s subpixels=1 -T 9 -t  || pdf2swf out.pdf -o flash.swf -f -s jpegquality=50 -s subpixels=1 -s poly2bitmap -T 9 -t'); }
+} else { exec('pdf2swf *.pdf -o flash.swf -f -s breakonwarning -s jpegquality=94 -s subpixels=1 -T 9 -t -z || pdf2swf *.pdf -o flash.swf -s jpegquality=94 -s subpixels=1 -s poly2bitmap -T 9 -t -z'); }
 ?>
 
 <html>
@@ -22,7 +21,10 @@ if (file_exists($filename)) {
     <script type="text/javascript" src="/flexpaper_handlers.js"></script>
 </head>
 <body>
-<div style="position:absolute;left:4px;top:4px;"><div id="documentViewer" class="flexpaper_viewer"style="width:632px;height:874px"></div>
+<div style="position:absolute;left:10px;top:10px;">
+<div id="documentViewer" class="flexpaper_viewer"
+style="width:610px;height:866px"></div>
+
 <script type="text/javascript">
 
     var startDocument = "Paper";
@@ -31,28 +33,27 @@ if (file_exists($filename)) {
 
                 SWFFile : 'flash.swf',
 
-                Scale : 0.6,
-                ZoomTransition : 'easeOut',
+                Scale : 1,
+                ZoomTransition : 'linear',
                 ZoomTime : 0.5,
                 ZoomInterval : 0.2,
                 FitPageOnLoad : false,
                 FitWidthOnLoad : true,
                 FullScreenAsMaxWindow : false,
-                ProgressiveLoading : false,
+                ProgressiveLoading : true,
                 MinZoomSize : 0.2,
-                MaxZoomSize : 5,
+                MaxZoomSize : 1,
                 SearchMatchAll : false,
                 InitViewMode : 'Portrait',
                 RenderingOrder : 'flash',
                 StartAtPage : '',
-
                 ViewModeToolsVisible : true,
                 ZoomToolsVisible : true,
                 NavToolsVisible : true,
                 CursorToolsVisible : true,
                 SearchToolsVisible : true,
                 WMode : 'window',
-                localeChain: 'en_US'
+                localeChain: 'sk_SK'
             }}
     );
 </script>

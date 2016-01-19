@@ -22,9 +22,7 @@ if (file_exists($filename)) {
     <script type="text/javascript" src="/flexpaper_handlers.js"></script>
 </head>
 <body>
-<div style="position:absolute;left:10px;top:10px;">
-<div id="documentViewer" class="flexpaper_viewer"
-style="width:600px;height:850px"></div>
+<div style="position:absolute;left:4px;top:4px;"><div id="documentViewer" class="flexpaper_viewer"style="width:632px;height:874px"></div>
 
 <script type="text/javascript">
 
@@ -34,14 +32,14 @@ style="width:600px;height:850px"></div>
 
                 SWFFile : 'flash.swf',
 
-                Scale : 0.6,
-                ZoomTransition : 'easeOut',
+                Scale : 1,
+                ZoomTransition : 'linear',
                 ZoomTime : 0.5,
                 ZoomInterval : 0.2,
                 FitPageOnLoad : false,
                 FitWidthOnLoad : true,
                 FullScreenAsMaxWindow : false,
-                ProgressiveLoading : false,
+                ProgressiveLoading : true,
                 MinZoomSize : 0.2,
                 MaxZoomSize : 5,
                 SearchMatchAll : false,
