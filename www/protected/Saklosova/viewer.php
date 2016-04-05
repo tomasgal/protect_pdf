@@ -60,14 +60,7 @@ if (file_exists($filename)) {
 
 <script type="text/javascript">
     var url = window.location.href.toString();
-
-    if(location.length==0){
-        url = document.URL.toString();
-    }
-
-    if(url.indexOf("file:")>=0){
-        jQuery('#documentViewer').html("<div style='position:relative;background-color:#ffffff;width:420px;font-family:Verdana;font-size:10pt;left:22%;top:20%;padding: 10px 10px 10px 10px;border-style:solid;border-width:5px;'><img src='http://flexpaper.devaldi.com/resources/warning_icon.gif'>&nbsp;<b>You are trying to use FlexPaper from a local directory.</b><br/><br/> FlexPaper needs to be copied to a web server before the viewer can display its document properlty.<br/><br/>Please copy the FlexPaper files to a web server and access the viewer through a http:// url.</div>");
-    }
+    if(location.length==0){url = document.URL.toString();}
 </script>
 </body>
 </html>

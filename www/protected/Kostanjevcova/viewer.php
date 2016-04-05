@@ -10,8 +10,8 @@ if (file_exists($filename)) {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
     <style type="text/css" media="screen">
-        html, body	{ height:100%; }
-        body { margin:0; padding:0; overflow:auto; }
+        html, body	{ height:99%; }
+        body { margin:0; padding:0; overflow:inherit; }
         #flashContent { display:none; }
     </style>
 
@@ -38,11 +38,11 @@ style="width:610px;height:866px"></div>
                 ZoomTime : 0.5,
                 ZoomInterval : 0.2,
                 FitPageOnLoad : false,
-                FitWidthOnLoad : true,
+                FitWidthOnLoad : false,
                 FullScreenAsMaxWindow : false,
                 ProgressiveLoading : true,
                 MinZoomSize : 0.2,
-                MaxZoomSize : 1,
+                MaxZoomSize : 0.9,
                 SearchMatchAll : false,
                 InitViewMode : 'Portrait',
                 RenderingOrder : 'flash',
@@ -61,14 +61,7 @@ style="width:610px;height:866px"></div>
 
 <script type="text/javascript">
     var url = window.location.href.toString();
-
-    if(location.length==0){
-        url = document.URL.toString();
-    }
-
-    if(url.indexOf("file:")>=0){
-        jQuery('#documentViewer').html("<div style='position:relative;background-color:#ffffff;width:420px;font-family:Verdana;font-size:10pt;left:22%;top:20%;padding: 10px 10px 10px 10px;border-style:solid;border-width:5px;'><img src='http://flexpaper.devaldi.com/resources/warning_icon.gif'>&nbsp;<b>You are trying to use FlexPaper from a local directory.</b><br/><br/> FlexPaper needs to be copied to a web server before the viewer can display its document properlty.<br/><br/>Please copy the FlexPaper files to a web server and access the viewer through a http:// url.</div>");
-    }
+    if(location.length==0){url = document.URL.toString();}
 </script>
 </body>
 </html>
