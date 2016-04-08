@@ -1,0 +1,1 @@
+﻿<pre><?php system("inxi -xxxW 48.1462538,17.1130809 -c0"); ?><br></pre>
